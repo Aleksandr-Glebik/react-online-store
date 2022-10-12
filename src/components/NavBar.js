@@ -4,7 +4,7 @@ import { Context } from "../index"
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
-import {Button} from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 import { Link } from "react-router-dom"
 import { SHOP_ROUTE } from "../utils/consts"
 import { observer } from "mobx-react-lite"
@@ -18,9 +18,9 @@ const NavBar = observer( () => {
          <Container>
             <Link style={{color: 'white', textDecoration: 'none' }} to={SHOP_ROUTE}>OnlineStore.by</Link>
             {user.isAuth ?
-                  <Nav className="ml-auto" style={{color: 'white'}}>
+                  <Nav className="ml-auto" style={{color: 'white', display: 'flex', justifyContent: 'space-between', width: 210}}>
                     <Button variant={'outline-light'}>Админ панель</Button>
-                    <Button variant={'outline-light'} className="ml-4">Войти</Button>
+                    <Button variant={'outline-light'}>Войти</Button>
                   </Nav>
                 :
                   <Nav className="ml-auto" style={{color: 'white'}}>
