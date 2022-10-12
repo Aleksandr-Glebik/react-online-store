@@ -19,6 +19,8 @@ export default class DeiceStore {
             {id: 2, name: 'iPhone 9', price: 549, rating: 4.69, img: "https://dummyjson.com/image/i/products/1/1.jpg"},
             {id: 3, name: 'iPhone 9', price: 549, rating: 4.69, img: "https://dummyjson.com/image/i/products/1/1.jpg"},
             {id: 4, name: 'iPhone 9', price: 549, rating: 4.69, img: "https://dummyjson.com/image/i/products/1/1.jpg"},
+            {id: 5, name: 'iPhone 9', price: 549, rating: 4.69, img: "https://dummyjson.com/image/i/products/1/1.jpg"},
+            {id: 6, name: 'iPhone 9', price: 549, rating: 4.69, img: "https://dummyjson.com/image/i/products/1/1.jpg"},
         ]
         this._selectedType = {}
         this._selectedBrand = {}
