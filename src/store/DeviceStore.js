@@ -11,6 +11,8 @@ export default class DeiceStore {
         this._brands = [
             {id: 1, name: 'Samsung'},
             {id: 2, name: 'Apple'},
+            {id: 3, name: 'Lenovo'},
+            {id: 4, name: 'Xiaomi'},
         ]
         this._devices = [
             {id: 1, name: 'iPhone 9', price: 549, rating: 4.69, img: "https://dummyjson.com/image/i/products/1/1.jpg"},
@@ -19,6 +21,7 @@ export default class DeiceStore {
             {id: 4, name: 'iPhone 9', price: 549, rating: 4.69, img: "https://dummyjson.com/image/i/products/1/1.jpg"},
         ]
         this._selectedType = {}
+        this._selectedBrand = {}
         makeAutoObservable(this)
     }
 
@@ -34,6 +37,9 @@ export default class DeiceStore {
     setSelectedType(type) {
         this._selectedType = type
     }
+    setSelectedBrand(brand) {
+        this._selectedBrand = brand
+    }
 
     get types() {
         return this._types
@@ -46,6 +52,9 @@ export default class DeiceStore {
     }
     get selectedType() {
         return this._selectedType
+    }
+    get selectedBrand() {
+        return this._selectedBrand
     }
 
 }
