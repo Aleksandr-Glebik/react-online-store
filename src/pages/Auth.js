@@ -14,7 +14,7 @@ const Auth = () => {
         >
             <Card style={{width: 600}} className='p-5'>
                 <h2 className="m-auto">
-                    {isLogin ? 'Авторизация' : 'Ругистрация' }
+                    {isLogin ? 'Авторизация' : 'Регистрация' }
                 </h2>
                 <Form className="d-flex flex-column">
                     <Form.Control
