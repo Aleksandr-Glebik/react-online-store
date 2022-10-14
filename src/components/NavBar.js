@@ -6,21 +6,36 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import { Button } from 'react-bootstrap'
 import { Link } from "react-router-dom"
-import { SHOP_ROUTE } from "../utils/consts"
+import { ADMIN_ROUTE, LOGIN_ROUTE, SHOP_ROUTE } from "../utils/consts"
 import { observer } from "mobx-react-lite"
-
+import { useNavigate } from "react-router-dom"
 
 
 const NavBar = observer( () => {
     const {user} = useContext(Context)
+    const navigate = useNavigate()
+
+    const goToAdminPage = () => {
+      navigate(ADMIN_ROUTE)
+    }
+    const goToLoginPage = () => {
+      navigate(LOGIN_ROUTE)
+    }
+
     return (
         <Navbar bg="dark" variant="dark">
          <Container>
             <Link style={{color: 'white', textDecoration: 'none' }} to={SHOP_ROUTE}>OnlineStore.by</Link>
             {user.isAuth ?
                   <Nav className="ml-auto" style={{color: 'white', display: 'flex', justifyContent: 'space-between', width: 210}}>
-                    <Button variant={'outline-light'}>Админ панель</Button>
-                    <Button variant={'outline-light'}>Войти</Button>
+                    <Button
+                      variant={'outline-light'}
+                      onClick={() => goToAdminPage()}
+                    >Админ панель</Button>
+                    <Button
+                      variant={'outline-light'}
+                      onClick={() => goToLoginPage()}
+                    >Выйти</Button>
                   </Nav>
                 :
                   <Nav className="ml-auto" style={{color: 'white'}}>
