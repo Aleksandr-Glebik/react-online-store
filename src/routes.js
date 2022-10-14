@@ -20,6 +20,10 @@ export const authRoutes = [
 
 export const publicRoutes = [
     {
+        path: ADMIN_ROUTE,
+        Element: <Admin />
+    },
+    {
         path: SHOP_ROUTE,
         Element: <Shop />
     },
