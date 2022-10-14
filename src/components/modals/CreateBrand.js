@@ -20,7 +20,7 @@ const CreateBrand = ({show, onHide}) => {
         <Modal.Body>
             <Form>
                 <Form.Control
-                    placeholder="Введите название типа устройства"
+                    placeholder="Введите название бренда устройства"
                 />
             </Form>
         </Modal.Body>
