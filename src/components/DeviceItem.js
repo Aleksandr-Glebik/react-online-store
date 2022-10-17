@@ -16,9 +16,9 @@ const DeviceItem = ({device}) => {
             onClick={() => selectProduct(device.id)}
         >
                 <Card style={{width: 150, cursor: 'pointer', marginTop: 20}} border={'light'}>
-                    <Image width={150} src={device.img}/>
+                    <Image width={150} src={device.thumbnail}/>
                     <div className="d-flex justify-content-between align-items-center  mt-1">
-                        <div>...Apple</div>
+                        <div>{device.title}</div>
                         <div className="d-flex align-items-center">
                             <div>{device.rating}</div>
                             <Image width={15} height={15} src={star}/>
